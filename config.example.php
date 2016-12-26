@@ -35,6 +35,19 @@ if (directory() != '') {
 } else {
 	$subdirectory = '/';
 }
+
+// some new bad code
+if (directory() != '') {
+        $subdirectory = '/'.directory().'/';
+} else {
+        $subdirectory = '/';
+}
+
+if(directory() != ''){
+  $subdirectory = '/'.directory().'/';
+}else{
+       $subdirectory = '/';
+}
 	
 if (isset($_SERVER['REQUEST_SCHEME'])) {
 	@define('HOST_URL', $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].''.$subdirectory);	// Host
